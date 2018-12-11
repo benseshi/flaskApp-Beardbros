@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		{%if title%}
+			<title> Toroi-blog-{{title}}</title>
+		{%else%}
+			<title> Toroi-blog</title>
+		{%endif%}
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.min.css')}}">
+	
+		
+	</head>
+	<body>
+		<div class="col-md-8">
+			{%with messages =get_flashed_messages(with_categories=true)%}
+				{%if messages %}
+					{%for category,message in messages%}
+					<div class="alert alert-{{category}}">
+						{{message}}
+					</div>
+					{%endfor%}
+				{% endif %}
+			{% endwith %}
+
+
+		</div>
+		{%block content%}{%endblock%}
+	</body>
+</html>

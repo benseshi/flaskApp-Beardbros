@@ -1,0 +1,15 @@
+{%extends "main.html"%}
+{%block body%}
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<body>
+	{%for t in TOPIC_DICT ["Basics"]%}
+	<li><a href="{{t[1]}}">{{t[0]}}</a>
+	</li>
+
+{%endfor%}
+{%endblock%}
+	</body>
+</html>

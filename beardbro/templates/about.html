@@ -1,0 +1,11 @@
+{%extends "layout.html"%}
+{%block content%}
+	{%for post in posts %}
+		<p>manager:{{post.manager}}</p>
+		<p>title:{{post.title}}</p>
+		<p>content:{{post.content}}</p>
+		<p>data type:{{post.datatype}}</p>
+		<h1>==========================</h1>
+				
+	{%endfor%}
+{%endblock content%}
